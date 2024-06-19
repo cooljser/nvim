@@ -10,7 +10,7 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
   -- A list of servers to automatically install if they're not already installed
-  ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer', 'tsserver', 'cssmodules_ls', 'emmet_ls' },
+  ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer', 'tsserver', 'cssmodules_ls', 'emmet_language_server' },
 })
 
 -- Set different settings for different languages' LSP
@@ -76,7 +76,6 @@ lspconfig.cssmodules_ls.setup({
   on_attach = on_attach,
 })
 
-lspconfig.emmet_ls.setup({
-  on_attach = on_attach,
+lspconfig.emmet_language_server.setup({
+  on_attach = on_attach
 })
-
