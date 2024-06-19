@@ -64,7 +64,6 @@ require("lazy").setup({
   },
   {
     "hrsh7th/nvim-cmp",
-    event = 'InsertEnter',
     dependencies = {
       "lspkind.nvim",
       "hrsh7th/cmp-nvim-lsp", -- lsp auto-completion
