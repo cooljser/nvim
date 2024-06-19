@@ -151,6 +151,6 @@ require("lazy").setup({
   'dstein64/vim-startuptime',
   {
     "rcarriga/nvim-notify",
-    evnet = 'VimEnter'
+    event = 'VimEnter'
   }
 })

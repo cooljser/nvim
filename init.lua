@@ -1,6 +1,6 @@
 require('basic')
-require('maps')
 require('plugins')
+require('maps')
 require('colorscheme')
 require('plugins.telescope')
 require('plugins.nvim-tree')
