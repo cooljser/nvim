@@ -4,10 +4,6 @@ if not status_ok then
   return
 end
 
-local hide_in_width = function()
-  return vim.fn.winwidth(0) > 80
-end
-
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
@@ -16,18 +12,6 @@ local diagnostics = {
   colored = false,
   update_in_insert = false,
   always_visible = true,
-}
-
-local diff = {
-  "diff",
-  colored = true,
-  symbols = { added = "  ", modified = " ", removed = " " },
-  diff_color = {
-    added = { fg = "#98be65" },
-    modified = { fg = "#ecbe7b" },
-    removed = { fg = "#ec5f67" },
-  },
-  cond = hide_in_width
 }
 
 local mode = {
@@ -95,7 +79,7 @@ lualine.setup({
     lualine_a = { branch, diagnostics },
     lualine_b = { mode },
     lualine_c = { file_name },
-    lualine_x = { diff, filetype, "fileformat" },
+    lualine_x = { filetype, "fileformat" },
   },
   inactive_sections = {
     lualine_a = {},

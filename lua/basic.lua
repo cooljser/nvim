@@ -47,7 +47,8 @@ o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
 -- o.formatoptions = 'qrn1'
 
 -- Makes neovim and host OS clipboard play nicely with each other
-o.clipboard = "unnamedplus"
+opt.clipboard:append('unnamedplus')
+
 
 -- Case insensitive searching UNLESS /C or capital in search
 o.ignorecase = true
