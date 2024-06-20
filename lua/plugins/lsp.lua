@@ -1,11 +1,11 @@
 require('mason').setup({
   ui = {
     icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
-  }
+      package_installed = '✓',
+      package_pending = '➜',
+      package_uninstalled = '✗',
+    },
+  },
 })
 
 require('mason-lspconfig').setup({
@@ -30,7 +30,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -51,9 +51,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', '<cmd>Lspsaga code_action<CR>', bufopts)
   vim.keymap.set('n', 'gr', '<cmd>Lspsaga finder<CR>', bufopts)
   -- vim.keymap.set("n", "<space>f", function()
-    -- vim.lsp.buf.format({ async = true })
+  -- vim.lsp.buf.format({ async = true })
   -- end, bufopts)
-  client.server_capabilities.documentFormattingProvider = false
 end
 
 -- Configure each language
@@ -70,12 +69,13 @@ lspconfig.pylsp.setup({
 
 lspconfig.tsserver.setup({
   capabilities = capabilities,
+  filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx' },
   on_attach = on_attach,
-  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 })
 
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
+  filetypes = { 'lua' },
   on_attach = on_attach,
 })
 
@@ -86,5 +86,5 @@ lspconfig.cssmodules_ls.setup({
 
 lspconfig.emmet_language_server.setup({
   capabilities = capabilities,
-  on_attach = on_attach
+  on_attach = on_attach,
 })
