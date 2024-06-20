@@ -84,7 +84,7 @@ require("lazy").setup({
   {
     'MunifTanjim/prettier.nvim',
     dependencies = {
-      'jose-elias-alvarez/null-ls.nvim'
+      'nvimtools/none-ls.nvim'
     }
   },
   {
