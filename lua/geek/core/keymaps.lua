@@ -1,13 +1,3 @@
--------------------------------------------------
--- DT'S NEOVIM CONFIGURATION
--- Neovim website: https://neovim.io/
--- DT's dotfiles: https://gitlab.com/dwt1/dotfiles
--------------------------------------------------
-
--------------------------------------------------
--- KEYBINDINGS
--------------------------------------------------
-
 local function map(m, k, v)
   vim.keymap.set(m, k, v, { silent = true })
 end
@@ -32,10 +22,6 @@ map('n', 'yL', 'y$')
 map('n', 'dl', 'd$')
 map('n', 'M', '%')
 
--- Mimic shell movements
-map('i', '<C-E>', '<ESC>A')
-map('i', '<C-A>', '<ESC>I')
-
 -- Smart way to move between windows
 map('n', '<C-j>', '<C-W>j')
 map('n', '<C-k>', '<C-W>k')
@@ -55,11 +41,6 @@ map('n', '<leader>h', '<CMD>DiffviewFileHistory<CR>')
 map('n', '<leader>ch', '<CMD>DiffviewFileHistory %<CR>')
 map('n', '<leader>gd', '<CMD>DiffviewOpen<CR>')
 map('n', '<leader>gc', '<CMD>DiffviewClose<CR>')
-
--- Fzf
---map('n', "<C-f>", "<CMD>FzfLua files<CR>")
--- map("n", "<C-f>", "<CMD>Telescope find_files<CR>")
--- map("n", "<leader>ft", "<CMD>FzfLua colorschemes<CR>")
 
 -- Auto log
 map('n', '<leader>l', '"ayiwoconsole.log(\'<C-R>a:\', <C-R>a);<Esc>')

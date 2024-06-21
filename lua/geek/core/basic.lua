@@ -1,9 +1,3 @@
--------------------------------------------------
--- DT'S NEOVIM CONFIGURATION
--- Neovim website: https://neovim.io/
--- DT's dotfiles: https://gitlab.com/dwt1/dotfiles
--------------------------------------------------
-
 local g = vim.g
 local o = vim.o
 local opt = vim.opt
@@ -28,7 +22,7 @@ o.scrolloff = 8
 o.number = true
 o.numberwidth = 2
 o.relativenumber = true
-o.signcolumn = "yes"
+o.signcolumn = 'yes'
 o.cursorline = true
 
 -- Better editing experience
@@ -42,13 +36,12 @@ o.tabstop = 2
 o.shiftwidth = 2
 o.softtabstop = -1 -- If negative, shiftwidth value is used
 o.list = true
-o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 -- o.listchars = 'eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,'
 -- o.formatoptions = 'qrn1'
 
 -- Makes neovim and host OS clipboard play nicely with each other
 opt.clipboard:append('unnamedplus')
-
 
 -- Case insensitive searching UNLESS /C or capital in search
 o.ignorecase = true
@@ -84,11 +77,10 @@ o.splitbelow = true
 -- o.foldnestmax = 3
 -- o.foldminlines = 1
 --
-opt.mouse = "a"
+opt.mouse = 'a'
 
 -- Map <leader> to space
-g.mapleader = " "
-g.maplocalleader = " "
+g.mapleader = ' '
+g.maplocalleader = ' '
 
 o.modifiable = true
-
