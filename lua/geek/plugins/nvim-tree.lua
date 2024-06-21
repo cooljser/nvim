@@ -5,10 +5,10 @@ return {
     vim.opt.termguicolors = true
 
     local function my_on_attach(bufnr)
-      local api = require "nvim-tree.api"
+      local api = require('nvim-tree.api')
 
       local function opts(desc)
-        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
       end
 
       -- default mappings
@@ -18,31 +18,31 @@ return {
     end
 
     local glyphs = {
-      default = "",
-      symlink = "",
+      default = '',
+      symlink = '',
       git = {
-        unstaged = "",
-        staged = "S",
-        unmerged = "",
-        renamed = "➜",
-        deleted = "",
-        untracked = "U",
-        ignored = "◌",
+        unstaged = '',
+        staged = 'S',
+        unmerged = '',
+        renamed = '➜',
+        deleted = '',
+        untracked = 'U',
+        ignored = '◌',
       },
       folder = {
-        default = "",
-        open = "",
-        empty = "",
-        empty_open = "",
-        symlink = "",
+        default = '',
+        open = '',
+        empty = '',
+        empty_open = '',
+        symlink = '',
       },
     }
 
     -- OR setup with some options
-    require("nvim-tree").setup({
+    require('nvim-tree').setup({
       on_attach = my_on_attach,
       auto_reload_on_write = true,
-      sort_by = "case_sensitive",
+      sort_by = 'case_sensitive',
       update_cwd = true,
       update_focused_file = {
         enable = false,
@@ -61,12 +61,16 @@ return {
             git = true,
             modified = true,
           },
-          glyphs = glyphs
-        }
+          glyphs = glyphs,
+        },
       },
       filters = {
         dotfiles = true,
-      }
+      },
     })
-  end
+
+    -- set keymaps
+    vim.keymap.set('n', '<leader>nn', '<CMD>NvimTreeToggle<CR>')
+    vim.keymap.set('n', '<leader>nf', '<CMD>NvimTreeFindFile<CR>')
+  end,
 }
