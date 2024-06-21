@@ -45,10 +45,6 @@ map('n', '<C-l>', '<C-W>l')
 -- Ack
 --vim.keymap.set("n", "<leader>g", ":Ack!<Space>", { silent = false })
 
--- Prettier
--- vim.cmd("command! -nargs=0 Prettier :CocCommand prettier.formatFile")
-map('n', '<leader>p', '<CMD>Prettier<CR>')
-
 -- Run javascript
 map('n', '<F5>', '<CMD>!node %<CR>')
 map('n', '<F2>', '<CMD>Git blame<CR>')
@@ -67,18 +63,3 @@ map('n', '<leader>gc', '<CMD>DiffviewClose<CR>')
 
 -- Auto log
 map('n', '<leader>l', '"ayiwoconsole.log(\'<C-R>a:\', <C-R>a);<Esc>')
-
--- Lazygit
-map('n', '<leader>g', '<CMD>LazyGit<CR>')
-
--- 插件快捷键
-local pluginKeys = {}
-
-pluginKeys.mapToggleTerm = function(toggleterm)
-  vim.keymap.set({ 'n', 't' }, '<leader>ta', toggleterm.toggleA)
-  vim.keymap.set({ 'n', 't' }, '<leader>tb', toggleterm.toggleB)
-  vim.keymap.set({ 'n', 't' }, '<leader>tc', toggleterm.toggleC)
-  vim.keymap.set({ 'n', 't' }, '<leader>tg', toggleterm.toggleG)
-end
-
-return pluginKeys
