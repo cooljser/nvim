@@ -16,7 +16,6 @@ end
 map("n", "qq", "<CMD>q!<CR>")
 map("n", "<leader>qq", "<CMD>qa!<CR>")
 map("n", "<leader><cr>", "<CMD>noh<CR>")
-map("n", "<leader>j", "<CMD>HopWord<CR>")
 map("n", "<leader>w", "<CMD>wa<CR>")
 
 map("n", "<leader>tn", "<CMD>tabnew<CR>")
@@ -37,13 +36,6 @@ map("n", "M", "%")
 map("i", "<C-E>", "<ESC>A")
 map("i", "<C-A>", "<ESC>I")
 
--- Keybindings for telescope
-map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>")
-map("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
-map("n", "<leader>fw", "<CMD>Telescope live_grep_args<CR>")
-map("n", "<leader>fb", "<CMD>Telescope buffers<CR>")
-local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-map('n', "<leader>a", live_grep_args_shortcuts.grep_word_under_cursor)
 map("n", "<leader>fp", "<CMD>SessionManager load_session<CR>")
 
 -- NvimTree
@@ -96,3 +88,4 @@ pluginKeys.mapToggleTerm = function(toggleterm)
 end
 
 return pluginKeys
+
