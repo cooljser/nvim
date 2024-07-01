@@ -55,6 +55,9 @@ return {
     end
 
     cmp.setup({
+      performance = {
+        max_view_entries = 15,
+      },
       completion = {
         completeopt = 'menu,menuone,preview,noselect',
       },
