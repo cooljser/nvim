@@ -8,12 +8,12 @@ map('n', '<leader>qq', '<CMD>qa!<CR>')
 map('n', '<leader><cr>', '<CMD>noh<CR>')
 map('n', '<leader>w', '<CMD>wa<CR>')
 
+-- Tab switch map
 map('n', '<leader>tn', '<CMD>tabnew<CR>')
 map('n', '<leader>1', '1gt<CR>')
 map('n', '<leader>2', '2gt<CR>')
 map('n', '<leader>3', '3gt<CR>')
-map('n', '<leader>ev', '<CMD>:vs ~/.config/nvim/init.lua<CR>')
--- map('n', '<leader>r', '<CMD>e!<CR>')
+
 map('n', 'H', '^')
 map('n', 'yH', 'y^')
 map('n', 'dh', 'd^')
