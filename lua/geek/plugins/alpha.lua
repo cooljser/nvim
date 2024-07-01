@@ -22,7 +22,7 @@ return {
       dashboard.button('e', '  > New File', '<cmd>ene<CR>'),
       dashboard.button('SPC e', '  > Toggle file explorer', '<cmd>NvimTreeToggle<CR>'),
       dashboard.button('SPC f', '󰱼  > Find File', '<cmd>Telescope find_files<CR>'),
-      dashboard.button('SPC fs', '  > Find Word', '<cmd>Telescope live_grep<CR>'),
+      dashboard.button('SPC fw', '  > Find Word', '<cmd>Telescope live_grep<CR>'),
       dashboard.button(
         'SPC r',
         '󰁯  > Restore Session For Current Directory',
