@@ -36,11 +36,11 @@ map('n', '<F5>', '<CMD>!node %<CR>')
 map('n', '<F2>', '<CMD>Git blame<CR>')
 
 -- Git diffview
-map('n', '<leader>d', '<CMD>Git<CR>')
-map('n', '<leader>h', '<CMD>DiffviewFileHistory<CR>')
-map('n', '<leader>ch', '<CMD>DiffviewFileHistory %<CR>')
-map('n', '<leader>gd', '<CMD>DiffviewOpen<CR>')
-map('n', '<leader>gc', '<CMD>DiffviewClose<CR>')
+-- map('n', '<leader>d', '<CMD>Git<CR>')
+-- map('n', '<leader>h', '<CMD>DiffviewFileHistory<CR>')
+-- map('n', '<leader>ch', '<CMD>DiffviewFileHistory %<CR>')
+-- map('n', '<leader>gd', '<CMD>DiffviewOpen<CR>')
+-- map('n', '<leader>gc', '<CMD>DiffviewClose<CR>')
 
 -- Auto log
 map('n', '<leader>l', '"ayiwoconsole.log(\'<C-R>a:\', <C-R>a);<Esc>')
