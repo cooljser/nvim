@@ -24,7 +24,7 @@ return {
       dashboard.button('SPC f', '󰱼  > Find File', '<cmd>Telescope find_files<CR>'),
       dashboard.button('SPC fs', '  > Find Word', '<cmd>Telescope live_grep<CR>'),
       dashboard.button(
-        'SPC ls',
+        'SPC r',
         '󰁯  > Restore Session For Current Directory',
         '<cmd>SessionManager load_current_dir_session<CR>'
       ),
