@@ -71,6 +71,11 @@ return {
     keymap.set('n', '<leader>ft', '<cmd>Telescope colorscheme<cr>', { desc = 'Fuzzy find colorschemes' })
 
     local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
-    keymap.set('n', '<leader>a', live_grep_args_shortcuts.grep_word_under_cursor)
+    keymap.set(
+      'n',
+      '<leader>a',
+      live_grep_args_shortcuts.grep_word_under_cursor,
+      { desc = 'Find string under cursor in live grep' }
+    )
   end,
 }
