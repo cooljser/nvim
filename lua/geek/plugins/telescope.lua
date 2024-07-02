@@ -16,6 +16,11 @@ return {
     local lga_actions = require('telescope-live-grep-args.actions')
 
     telescope.setup({
+      pickers = {
+        colorscheme = {
+          enable_preview = true,
+        },
+      },
       defaults = {
         layout_strategy = 'horizontal',
         layout_config = {
@@ -63,6 +68,7 @@ return {
     keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<cr>', { desc = 'Fuzzy find recent files' })
     keymap.set('n', '<leader>fw', '<cmd>Telescope live_grep<cr>', { desc = 'Find string in cwd' })
     keymap.set('n', '<leader>fc', '<cmd>Telescope grep_string<cr>', { desc = 'Find string under cursor in cwd' })
+    keymap.set('n', '<leader>ft', '<cmd>Telescope colorscheme<cr>', { desc = 'Fuzzy find colorschemes' })
 
     local live_grep_args_shortcuts = require('telescope-live-grep-args.shortcuts')
     keymap.set('n', '<leader>a', live_grep_args_shortcuts.grep_word_under_cursor)
