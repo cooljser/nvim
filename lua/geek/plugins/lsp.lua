@@ -65,7 +65,7 @@ return {
       -- vim.keymap.set('n', '<space>wl', function()
       -- print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
       -- end, bufopts)
-      vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+      -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
       vim.keymap.set('n', '<space>rn', '<cmd>Lspsaga rename<CR>', bufopts)
       vim.keymap.set('n', '<space>ca', '<cmd>Lspsaga code_action<CR>', bufopts)
       vim.keymap.set('n', 'gr', '<cmd>Lspsaga finder<CR>', bufopts)
